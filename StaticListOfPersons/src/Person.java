@@ -15,6 +15,10 @@ public abstract class Person
         _persons.add(this);
     }
 
+    public String GetName()
+    {
+        return _name;
+    }
     public ArrayList<Person> Show()
     {
         return  _persons;
