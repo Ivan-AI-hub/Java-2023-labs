@@ -1,16 +1,16 @@
 public class Teacher
 {
-    private String Name;
+    private String _name;
 
     public Teacher(String name)
     {
-        Name = name;
+        _name = name;
     }
     public String getName() {
-        return Name;
+        return _name;
     }
 
     public void setName(String name) {
-        Name = name;
+        _name = name;
     }
 }
