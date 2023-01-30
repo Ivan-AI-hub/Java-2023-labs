@@ -1,4 +1,6 @@
-public class Assessment
+import java.io.Serializable;
+
+public class Assessment implements Serializable
 {
     private Course _course;
     private Student _student;

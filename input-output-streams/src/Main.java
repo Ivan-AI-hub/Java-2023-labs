@@ -1,3 +1,7 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,6 +13,26 @@ public class Main {
         ArrayList<Course> courses = GetCourses(teachers, students);
         ArrayList<Assessment> assessments = GetAssessments(courses);
 
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.dat")))
+        {
+            oos.writeObject(assessments);
+        }
+        catch(Exception ex){
+
+            System.out.println(ex.getMessage());
+        }
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.dat")))
+        {
+            ArrayList<Assessment> readedAssessments =(ArrayList<Assessment>)ois.readObject();
+            for(var ass : readedAssessments)
+            {
+                System.out.printf("Student: %s \t Score: %d \n", ass.getStudent().getName(), ass.get_score());
+            }
+        }
+        catch(Exception ex){
+
+            System.out.println(ex.getMessage());
+        }
     }
 
     private static ArrayList<Teacher> GetTeachers(int count)
