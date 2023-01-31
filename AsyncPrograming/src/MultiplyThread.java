@@ -6,11 +6,17 @@ public class MultiplyThread extends Thread
     public void run()
     {
         Random rn = new Random();
-        while (true)
+        while (!isInterrupted())
         {
-            int a = rn.nextInt();
-            int b = rn.nextInt();
-            StaticSequence.Sequence.push(a*b);
+            int a = rn.nextInt(10, 21);
+            int b = rn.nextInt(10, 21);
+            try
+            {
+                StaticSequence.Sequence.put(a*b);
+            } catch (InterruptedException e)
+            {
+                break;
+            }
         }
     }
 }

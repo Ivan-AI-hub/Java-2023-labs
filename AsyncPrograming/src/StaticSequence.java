@@ -1,11 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
+import java.util.concurrent.SynchronousQueue;
 
 public class StaticSequence
 {
-    public static ArrayDeque<Integer> Sequence;
+    public static SynchronousQueue<Integer> Sequence;
     static
     {
-        Sequence = new ArrayDeque();
+        Sequence = new SynchronousQueue();
     }
 }

@@ -6,11 +6,16 @@ public class SumThread extends Thread
     public void run()
     {
         Random rn = new Random();
-        while (true)
+        while (!isInterrupted())
         {
-            int a = rn.nextInt();
-            int b = rn.nextInt();
-            StaticSequence.Sequence.push(a+b);
+            int a = rn.nextInt(0, 10);
+            int b = rn.nextInt(0, 10);
+            try {
+                StaticSequence.Sequence.put(a+b);
+            }
+            catch (InterruptedException e) {
+                break;
+            }
         }
     }
 }
