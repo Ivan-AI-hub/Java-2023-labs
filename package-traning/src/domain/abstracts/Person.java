@@ -1,3 +1,5 @@
+package domain.abstracts;
+
 import java.util.ArrayList;
 
 public abstract class Person

@@ -1,3 +1,6 @@
+import domain.*;
+import domain.abstracts.Person;
+
 import java.util.ArrayList;
 
 public class Main {
