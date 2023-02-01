@@ -26,7 +26,7 @@ public class Main {
             ArrayList<Assessment> readedAssessments =(ArrayList<Assessment>)ois.readObject();
             for(var ass : readedAssessments)
             {
-                System.out.printf("Student: %s \t Score: %d \n", ass.getStudent().getName(), ass.get_score());
+                System.out.printf("Student: %s \t Course: %s \t Score: %d \n", ass.getStudent().getName(), ass.getCourse().getName(), ass.get_score());
             }
         }
         catch(Exception ex){
