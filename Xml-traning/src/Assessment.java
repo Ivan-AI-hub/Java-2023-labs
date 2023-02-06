@@ -12,6 +12,13 @@ public class Assessment implements Serializable
         _score = score;
     }
 
+    public Assessment(String courseName, String teacherName, String studentName, Integer score)
+    {
+        _course = new Course(courseName, new Teacher(teacherName));
+        _student = new Student(studentName);
+        _score = score;
+    }
+
     public Course getCourse() {
         return _course;
     }

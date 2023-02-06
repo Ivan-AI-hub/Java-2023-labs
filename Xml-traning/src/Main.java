@@ -1,17 +1,27 @@
 import org.w3c.dom.*;
+import org.xml.sax.SAXException;
+
 import javax.xml.parsers.*;
+import javax.xml.transform.TransformerException;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) throws ParserConfigurationException {
+    public static void main(String[] args) throws ParserConfigurationException, TransformerException, IOException, SAXException {
         ArrayList<Teacher> teachers = GetTeachers(5);
         ArrayList<Student> students = GetStudents(50);
         ArrayList<Course> courses = GetCourses(teachers, students);
         ArrayList<Assessment> assessments = GetAssessments(courses);
 
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
+        MyXmlParser.write(assessments);
+
+        ArrayList<Assessment> readedAssessments = MyXmlParser.read();
+        for(var ass : readedAssessments)
+        {
+            System.out.printf("Student: %s \t Course: %s \t Score: %d \n", ass.getStudent().getName(), ass.getCourse().getName(), ass.get_score());
+        }
+
     }
 
     private static ArrayList<Teacher> GetTeachers(int count)

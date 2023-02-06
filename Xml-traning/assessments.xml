@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <assessment courseName="course0" score="8" studentName="student0" teacherName="teacher0"/>
+    <assessment courseName="course0" score="5" studentName="student1" teacherName="teacher0"/>
+    <assessment courseName="course0" score="6" studentName="student2" teacherName="teacher0"/>
+    <assessment courseName="course0" score="0" studentName="student3" teacherName="teacher0"/>
+    <assessment courseName="course0" score="3" studentName="student4" teacherName="teacher0"/>
+    <assessment courseName="course1" score="5" studentName="student5" teacherName="teacher1"/>
+    <assessment courseName="course1" score="6" studentName="student6" teacherName="teacher1"/>
+    <assessment courseName="course1" score="8" studentName="student7" teacherName="teacher1"/>
+    <assessment courseName="course1" score="6" studentName="student8" teacherName="teacher1"/>
+    <assessment courseName="course1" score="5" studentName="student9" teacherName="teacher1"/>
+    <assessment courseName="course2" score="2" studentName="student10" teacherName="teacher2"/>
+    <assessment courseName="course2" score="0" studentName="student11" teacherName="teacher2"/>
+    <assessment courseName="course2" score="1" studentName="student12" teacherName="teacher2"/>
+    <assessment courseName="course2" score="6" studentName="student13" teacherName="teacher2"/>
+    <assessment courseName="course2" score="3" studentName="student14" teacherName="teacher2"/>
+    <assessment courseName="course3" score="5" studentName="student15" teacherName="teacher3"/>
+    <assessment courseName="course3" score="5" studentName="student16" teacherName="teacher3"/>
+    <assessment courseName="course3" score="4" studentName="student17" teacherName="teacher3"/>
+    <assessment courseName="course3" score="2" studentName="student18" teacherName="teacher3"/>
+    <assessment courseName="course3" score="5" studentName="student19" teacherName="teacher3"/>
+    <assessment courseName="course4" score="4" studentName="student20" teacherName="teacher4"/>
+    <assessment courseName="course4" score="2" studentName="student21" teacherName="teacher4"/>
+    <assessment courseName="course4" score="3" studentName="student22" teacherName="teacher4"/>
+    <assessment courseName="course4" score="7" studentName="student23" teacherName="teacher4"/>
+    <assessment courseName="course4" score="1" studentName="student24" teacherName="teacher4"/>
+</root>
